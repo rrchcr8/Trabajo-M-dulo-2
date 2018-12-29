@@ -59,11 +59,15 @@ public class RegistroToolActivity extends AppCompatActivity implements Response.
         progreso.setMessage("cargando...");
         progreso.show();
 
-        String url="http://192.168.0.18/WebServicesCarlos/wsJSONRegistro.php?codigo_boa="+et1.getText().toString()+
+/*        String url="http://192.168.0.20/WebServicesCarlos/wsJSONRegistro.php?codigo_boa="+et1.getText().toString()+
            "&nombre="+et2.getText().toString()+
            "&pn="+et3.getText().toString()+"&sn="+et4.getText().toString();
+*/
+        String url="https://richterenterprises.000webhostapp.com/WebServicesCarlos/wsJSONRegistro.php?codigo_boa="+et1.getText().toString()+
+                "&nombre="+et2.getText().toString()+
+                "&pn="+et3.getText().toString()+"&sn="+et4.getText().toString();
 
-   url=url.replace(" ","%20");
+        url=url.replace(" ","%20");
 
    jsonObjectRequest= new JsonObjectRequest(Request.Method.GET,url,null,this,this);
     request.add(jsonObjectRequest);

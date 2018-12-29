@@ -1,7 +1,7 @@
 package cr8.rrch.boaherramientas;
 
 import android.graphics.Bitmap;
-import android.graphics.Bitmap;
+
 import android.graphics.BitmapFactory;
 import android.util.Base64;
 
@@ -15,7 +15,7 @@ private  String CodigoBoa;
 private String dato;
 private Bitmap imagen;
 
-/*public HerramientaVo(){
+public HerramientaVo(){
 
 }
 
@@ -27,7 +27,18 @@ private Bitmap imagen;
         //this.foto = foto;
     }
 
-*/
+
+public String getCodigoBoa() {
+    return CodigoBoa;
+}
+
+    public void setCodigoBoa(String codigoBoa) {
+        CodigoBoa = codigoBoa;
+    }
+
+    public String getDato() {
+        return dato;
+    }
 
     public void setDato(String dato) {
         this.dato = dato;
@@ -36,11 +47,11 @@ private Bitmap imagen;
             byte[] byteCode= Base64.decode(dato,Base64.DEFAULT);
             //this.imagen= BitmapFactory.decodeByteArray(byteCode,0,byteCode.length);
 
-            int alto=100;//alto en pixeles
-            int ancho=150;//ancho en pixeles
+            //int alto=100;//alto en pixeles
+            //int ancho=150;//ancho en pixeles
 
-            Bitmap foto=BitmapFactory.decodeByteArray(byteCode,0,byteCode.length);
-            this.imagen=Bitmap.createScaledBitmap(foto,alto,ancho,true);
+            //Bitmap foto=BitmapFactory.decodeByteArray(byteCode,0,byteCode.length);
+            this.imagen= BitmapFactory.decodeByteArray(byteCode,0,byteCode.length);
 
 
         }catch (Exception e){
@@ -75,13 +86,7 @@ private Bitmap imagen;
         this.PN = PN;
     }
 
-    public String getCodigoBoa() {
-        return CodigoBoa;
-    }
 
-    public void setCodigoBoa(String codigoBoa) {
-        CodigoBoa = codigoBoa;
-    }
 
 
 

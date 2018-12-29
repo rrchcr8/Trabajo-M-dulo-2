@@ -71,7 +71,11 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
         progress.setMessage("consultando....");
         progress.show();
 
-        String url="http://192.168.0.18/WebServicesCarlos/wsJSONConsultarLista.php";
+        //String ip = getString(R.string.ip);
+
+        //String url="http://192.168.0.20/WebServicesCarlos/wsJSONConsultarListaImagenes.php";
+        String url="https://richterenterprises.000webhostapp.com/WebServicesCarlos/wsJSONConsultarListaImagenes.php";
+
 
         jsonObjectRequest= new JsonObjectRequest(Request.Method.GET,url,null,this,this);
         request.add(jsonObjectRequest);
@@ -102,6 +106,7 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
             herramientaVo.setCodigoBoa(jsonObject.optString("codigo_boa"));
             herramientaVo.setNombre(jsonObject.optString("nombre"));
             herramientaVo.setPN(jsonObject.optString("pn"));
+            herramientaVo.setDato(jsonObject.optString("imagen"));
             listaHerramientas.add(herramientaVo);
 
                     }

@@ -2,4 +2,6 @@
     <string name="app_name">BoA Herramientas</string>
     <string name="et_usuario">Usuario</string>
     <string name="et_password">Contraseña</string>
+    <string name="ip">https://richterenterprises.000webhostapp.com</string>
+
 </resources>

@@ -37,7 +37,8 @@ public class AdaptadorHerramientas extends RecyclerView.Adapter<AdaptadorHerrami
         holder.etCodigoBoa.setText(listaHerramientas.get(position).getCodigoBoa());
         //holder.foto.setImageResource(listaHerramientas.get(position).getFoto());
 
-        if (listaHerramientas.get(position).getImagen()!=null){
+
+       if (listaHerramientas.get(position).getImagen()!=null){
             holder.imagen.setImageBitmap(listaHerramientas.get(position).getImagen());
         } else{
             holder.imagen.setImageResource(R.drawable.logo_letras);
