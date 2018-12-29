@@ -9,15 +9,21 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AdaptadorHerramientas extends RecyclerView.Adapter<AdaptadorHerramientas.ViewHolderHerramientas> {
 
-    ArrayList<HerramientaVo> listaHerramientas;
+    //ArrayList<HerramientaVo> listaHerramientas;
+    List<HerramientaVo> listaHerramientas;
 
-    public AdaptadorHerramientas(ArrayList<HerramientaVo> listaHerramientas) {
+    /*public AdaptadorHerramientas(ArrayList<HerramientaVo> listaHerramientas) {
         this.listaHerramientas = listaHerramientas;
     }
+    */
 
+    public AdaptadorHerramientas(List<HerramientaVo> listaHerramientas) {
+        this.listaHerramientas = listaHerramientas;
+    }
     @Override
     public ViewHolderHerramientas onCreateViewHolder( ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list,null, false);
@@ -29,8 +35,14 @@ public class AdaptadorHerramientas extends RecyclerView.Adapter<AdaptadorHerrami
         holder.etNombre.setText(listaHerramientas.get(position).getNombre());
         holder.etPN.setText(listaHerramientas.get(position).getPN());
         holder.etCodigoBoa.setText(listaHerramientas.get(position).getCodigoBoa());
-        holder.foto.setImageResource(listaHerramientas.get(position).getFoto());
+        //holder.foto.setImageResource(listaHerramientas.get(position).getFoto());
 
+        if (listaHerramientas.get(position).getImagen()!=null){
+            holder.imagen.setImageBitmap(listaHerramientas.get(position).getImagen());
+        } else{
+            holder.imagen.setImageResource(R.drawable.logo_letras);
+
+        }
 
 
     }
@@ -42,14 +54,17 @@ public class AdaptadorHerramientas extends RecyclerView.Adapter<AdaptadorHerrami
 
     public class ViewHolderHerramientas extends RecyclerView.ViewHolder {
         TextView etNombre, etPN, etCodigoBoa;
-        ImageView  foto;
+        //ImageView  foto;
+        ImageView  imagen;
 
         public ViewHolderHerramientas( View itemView) {
             super(itemView);
             etNombre=(TextView) itemView.findViewById(R.id.idNombre);
             etPN=(TextView) itemView.findViewById(R.id.idPN);
             etCodigoBoa=(TextView) itemView.findViewById(R.id.CodigoBoa);
-            foto=(ImageView) itemView.findViewById(R.id.IdImagen);
+            //foto=(ImageView) itemView.findViewById(R.id.IdImagen);
+            imagen=(ImageView) itemView.findViewById(R.id.IdImagen);
+
         }
     }
 }

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".RegistroToolActivity">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+
+        />
+    <TextView
+        android:id="@+id/Texview11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center"
+        android:text="REGISTRAR HERRAMIENTA"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:text="REGISTRAR HERRAMIENTA" />
+
+    <EditText
+        android:id="@+id/CampoCodigoBoA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Código BOA-H-:"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/CampoNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Nombre de la herramienta:"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/CampoPN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="P/N:"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/CampoSN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="S/N:"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/FechaCalibración"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Fecha Vencimiento calibración:"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/BtnRegistroTool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_weight="1"
+        android:text="Registrar Herramienta" />
+
+
+</LinearLayout>

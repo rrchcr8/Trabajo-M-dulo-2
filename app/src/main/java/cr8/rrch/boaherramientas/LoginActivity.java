@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +21,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        Toolbar toolbar= findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         etUsuario=(EditText) findViewById(R.id.et_usuario);
         etContraseña=(EditText) findViewById(R.id.et_contraseña);
         BtnIngresar=(Button) findViewById(R.id.btn_ingresar);
@@ -53,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
                        if (Contraseña.equals(con) && usu.equals(Usuario)) {
-                           Intent intentmain= new Intent(LoginActivity.this,MainActivity.class);
+                           Intent intentmain= new Intent(LoginActivity.this,MenuActivity.class);
                            startActivity(intentmain);
                        } else{
                            Toast.makeText(getApplicationContext(), "Usuario y/o contraseña equivocados", Toast.LENGTH_LONG).show();
